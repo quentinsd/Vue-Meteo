@@ -1,25 +1,15 @@
 <template>
-
-
+  <div class="h-screen w-screen flex flex-col justify-center items-center">
+    <City />
+  </div>
 </template>
 
 <script>
-
-export default {
-  name: 'App',
-  components: {
-    
-  }
-}
+  import City from "./components/City";
+  export default {
+    name: "App",
+    components: { City },
+  };
 </script>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-}
-</style>
+<style></style>
