@@ -36,9 +36,9 @@ const mutation = {
 
 const getters = {
   location: (state) => state.location,
-  tempMax: (state) => state.weather.main.temp_max,
-  tempMin: (state) => state.weather.main.temp_min,
-  temp: (state) => state.weather.main.temp,
+  tempMax: (state) => Math.round(state.weather.main.temp_max),
+  tempMin: (state) => Math.round(state.weather.main.temp_min),
+  temp: (state) => Math.round(state.weather.main.temp),
   feelsLike: (state) => state.weather.main.feels_like,
   pressure: (state) => state.weather.main.pressure,
   humidity: (state) => state.weather.main.humidity,
