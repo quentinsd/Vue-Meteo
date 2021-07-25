@@ -3,7 +3,7 @@
     type="text"
     name="city"
     v-model="city"
-    @keyup.enter="addLocation(city)"
+    @keyup.enter="fetchWeather(city)"
     class="h-15 w-15 text-center"
   />
 </template>
@@ -20,10 +20,10 @@
       };
     },
     methods: {
-      ...Vuex.mapActions(["addLocation"]),
+      ...Vuex.mapActions(["addLocation", "fetchWeather"]),
     },
-    computed: {
-      ...Vuex.mapGetters(["location"]),
+    mounted() {
+      this.fetchWeather(this.city);
     },
   };
 </script>

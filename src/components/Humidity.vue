@@ -1,12 +1,12 @@
 <template>
-  <p>{{ weatherCondition }}</p>
+  <p>{{ humidity }}</p>
 </template>
 
 <script>
   import Vuex from "vuex";
   export default {
     computed: {
-      ...Vuex.mapGetters(["weatherCondition"]),
+      ...Vuex.mapGetters(["humidity"]),
     },
   };
 </script>
